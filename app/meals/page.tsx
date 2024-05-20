@@ -1,11 +1,16 @@
+import { Suspense } from "react";
 import MealsGrid from "@/components/meals/meals-grid";
 import { getMeals } from "@/lib/meals";
 import Link from "next/link";
 import { Meal } from "@/types";
+import MealsLoadingPage from "./loading";
 
-const MealsPage = async () => {
+async function Meals() {
   const meals = await getMeals();
+  return <MealsGrid meals={meals as Meal[]} />;
+}
 
+const MealsPage = () => {
   return (
     <>
       <header className=" gap-12 mt-12 mr-auto mb-20 ml-auto w-[90%]  text-[#ddd6cb] text-2xl">
@@ -29,7 +34,9 @@ const MealsPage = async () => {
         </p>
       </header>
       <main>
-        <MealsGrid meals={meals as Meal[]} />
+        <Suspense fallback={<MealsLoadingPage />}>
+          <Meals />
+        </Suspense>
       </main>
     </>
   );
