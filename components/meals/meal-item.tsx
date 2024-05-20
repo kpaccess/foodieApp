@@ -1,16 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Meal } from "@/types";
 
-type MealItemProps = {
-  id: number;
-  title: string;
-  slug: string;
-  image: string;
-  summary: string;
-  creator: string;
-};
-
-const MealItem = ({ title, slug, image, summary, creator }: MealItemProps) => {
+const MealItem = ({ title, slug, image, summary, creator }: Meal) => {
   return (
     <article className="flex flex-col justify-between h-full rounded-lg shadow shadow-blue-500/40 text-[#ddd6cb]">
       <header>
