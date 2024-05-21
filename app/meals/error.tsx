@@ -1,6 +1,5 @@
 "use client";
 const Error = ({ error }: { error: Error }) => {
-  // text-transparent bg-clip-text bg-gradient-to-r from-[#f9572a] to-[#ff8a05]
   return (
     <main className=" mt-20 text-center">
       <h1 className=" text-7xl m-0 font-black  uppercase text-transparent bg-clip-text  bg-gradient-to-r from-[#f9572a] to-[#ffc905] bg-center font-sans">
