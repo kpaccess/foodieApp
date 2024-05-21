@@ -3,6 +3,7 @@ import { montserrat } from "@/app/fonts";
 
 import ImagePicker from "@/components/meals/image-picker";
 import MealsFormSubmit from "@/components/meals/meals-form-submit";
+import { shareMeal } from "@/lib/actions";
 
 const ShareMealsPage = () => {
   return (
@@ -17,7 +18,7 @@ const ShareMealsPage = () => {
         </h1>
       </header>
       <main className="w-[90%] max-w-[75rem] my-12 mx-auto text-white">
-        <form action="" className="max-w-[50rem]">
+        <form action={shareMeal} className="max-w-[50rem]">
           <div className="flex gap-4">
             <p className="w-full">
               <label
@@ -41,7 +42,7 @@ const ShareMealsPage = () => {
                 Your email
               </label>
               <input
-                type="text"
+                type="email"
                 id="email"
                 name="email"
                 className={`block w-full py-2 px-4 rounded border-solid border-[#454952] ${montserrat.className} text-[#ddd6cb] bg-[#1c2027] w-full`}
