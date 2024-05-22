@@ -15,16 +15,12 @@ export type MealsGridProps = {
 
 export type SaveMealProps = {
   meal: {
-    title: string;
-    image: {
-      size: number;
-      type: string;
-      name: string;
-      lastModified: number;
-    };
-    summary: string;
-    instructions: string;
-    creator?: null;
-    creator_email?: null;
+    slug?: string;
+    title?: string;
+    summary?: string;
+    instructions?: string;
+    image?: File | string;
+    creator?: string;
+    creator_email?: string;
   };
 };
