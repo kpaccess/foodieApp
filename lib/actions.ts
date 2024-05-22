@@ -1,5 +1,5 @@
 "use server";
-
+import { redirect } from "next/navigation";
 import { saveMeal } from "./meals";
 
 function isInvalidText(text: any): boolean {
@@ -30,4 +30,5 @@ export async function shareMeal(formData: FormData) {
   }
 
   saveMeal(meal);
+  redirect("/meals");
 }

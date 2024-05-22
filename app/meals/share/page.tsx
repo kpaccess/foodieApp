@@ -100,6 +100,7 @@ const ShareMealsPage = () => {
           </div>
           <ImagePicker label="Your image" name="image" />
           <p className=" text-right">
+            {/* Moved to seperate page to use useFormStatus only works on client */}
             <MealsFormSubmit />
           </p>
         </form>
