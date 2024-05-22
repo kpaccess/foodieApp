@@ -2,7 +2,7 @@
 import { redirect } from "next/navigation";
 import { saveMeal } from "./meals";
 
-function isInvalidText(text: any): boolean {
+function isInvalidText(text: string): boolean {
   return !text || text.trim() === "";
 }
 
